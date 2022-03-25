@@ -5,3 +5,24 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
+
+contacts = [
+    {
+      name: Faker::Name.name,
+      phone: Faker::PhoneNumber.cell_phone
+    },
+    {
+      name: Faker::Name.name,
+      phone: Faker::PhoneNumber.cell_phone
+    },
+    {
+      name: Faker::Name.name,
+      phone: Faker::PhoneNumber.cell_phone
+    }
+]
+
+contacts.each do |contact|
+  Contact.find_or_create_by!(contact)
+end
