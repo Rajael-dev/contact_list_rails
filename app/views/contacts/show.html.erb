@@ -1,14 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @contact.name %>
-</p>
+<form>
+  <div class="mb-3">
+    <%= label_tag nil, 'Nome' %>
+    <%= text_field_tag nil, @contact.name, class:"form-control", disabled: true %>
+  </div>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @contact.phone %>
-</p>
-
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+  <div class="mb-3">
+    <%= label_tag nil, 'Telefone' %>
+    <%= text_field_tag nil, @contact.phone, class:"form-control", disabled: true %>
+  </div>
+</form>
+<br>
+<%= link_to 'Editar', edit_contact_path(@contact), class:"btn btn-primary" %> |
+<%= link_to 'Voltar', contacts_path, class:"btn btn-primary" %>

@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: contact_list_production
-  username: contact_list
-  password: <%= ENV['CONTACT_LIST_DATABASE_PASSWORD'] %>
+  username: xoawdtubbvrmhd
+  host: ec2-3-229-161-70.compute-1.amazonaws.com
+  password: 67acdca3f47dc60d9d6c676825ea2e681e66bf9c46ba46b8a586f93e9ee0e9de
+  database: d7lld4pie59eqb
