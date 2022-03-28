@@ -25,7 +25,7 @@
         <td><%= contact.phone %></td>
         <td><%= link_to 'Mostrar', contact, class:"btn btn-info" %></td>
         <td><%= link_to 'Editar', edit_contact_path(contact), class:"btn btn-primary" %></td>
-        <td><%= link_to 'Apagar', contact, method: :delete, data: { confirm: 'Tem certeza?' }, class:"btn btn-danger" %></td>
+        <td><%= button_to 'Apagar', contact, method: :delete, data: { confirm: 'Tem certeza?' }, class:"btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
